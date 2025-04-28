@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novell Services Login</title>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <h2 class="text-2xl font-bold text-center mb-4">Novell Services Login</h2>
+    <form action="user-data" method="post">
+      <div class="mb-4">
+        <label for="username" class="block font-medium">Username:</label>
+        <input type="text" id="username" name="username" class="w-full border border-gray-300 rounded-md p-2 mt-1" />
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block font-medium">Password:</label>
+        <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-md p-2 mt-1" />
+      </div>
+      <div class="mb-4">
+        <label for="city" class="block font-medium">City of Employment:</label>
+        <input type="text" id="city" name="city" class="w-full border border-gray-300 rounded-md p-2 mt-1" />
+      </div>
+      <div class="mb-4">
+        <label for="server" class="block font-medium">Web server:</label>
+        <select id="server" name="server" class="w-full border border-gray-300 rounded-md p-2 mt-1">
+          <option>Choose a server</option>
+          <option>Server 1</option>
+          <option>Server 2</option>
+          <option>Server 3</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <p class="font-medium">Please specify your role:</p>
+        <div class="flex gap-4 mt-1">
+          <label><input type="radio" name="role" value="admin" class="mr-1"> Admin</label>
+          <label><input type="radio" name="role" value="engineer" class="mr-1"> Engineer</label>
+          <label><input type="radio" name="role" value="manager" class="mr-1"> Manager</label>
+          <label><input type="radio" name="role" value="guest" class="mr-1"> Guest</label>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <p class="font-medium">Single Sign-on to the following:</p>
+        <div class="flex gap-4 mt-1">
+          <label><input type="checkbox" name="sso" value="mail" class="mr-1"> Mail</label>
+          <label><input type="checkbox" name="sso" value="payroll" class="mr-1"> Payroll</label>
+          <label><input type="checkbox" name="sso" value="self-service" class="mr-1"> Self-service</label>
+        </div>
+      </div>
+
+      <div class="flex gap-4 mt-6">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Login</button>
+        <button type="reset" class="bg-gray-300 text-black px-4 py-2 rounded-md hover:bg-gray-400">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
